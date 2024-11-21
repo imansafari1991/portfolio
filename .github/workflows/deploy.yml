@@ -28,3 +28,16 @@ jobs:
     # Push the Docker image
     - name: Push Docker Image to DockerHub
       run: docker push imansafari24/portfolio:latest
+
+    # SSH to the server and deploy
+    - name: Deploy to Server
+      uses: appleboy/ssh-action@v0.1.8
+      with:
+        host: ${{ secrets.SERVER_HOST }}
+        username: ${{ secrets.SERVER_USER }}
+        script: |
+          docker pull imansafari24/portfolio:latest
+          docker stop next-portfolio || true
+          docker rm next-portfolio || true
+          docker run -d --name next-portfolio -p 80:80 imansafari24/portfolio:latest
+
