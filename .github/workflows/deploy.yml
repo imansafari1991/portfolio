@@ -37,6 +37,7 @@ jobs:
         username: ${{ secrets.SERVER_USER }}
         key: ${{ secrets.SERVER_SSH_KEY }}
         script: |
+          docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
           docker pull imansafari24/portfolio:latest
           docker stop next-portfolio || true
           docker rm next-portfolio || true
