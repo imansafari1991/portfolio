@@ -1,0 +1,45 @@
+name: Deploy Next.js App
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Checkout the repository
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    # Log in to DockerHub or your Docker registry
+    - name: Log in to DockerHub
+      uses: docker/login-action@v2
+      with:
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+
+    # Build the Docker image
+    - name: Build Docker Image
+      run: docker build -t imansafari24/portfolio:latest .
+
+    # Push the Docker image
+    - name: Push Docker Image to DockerHub
+      run: docker push imansafari24/portfolio:latest
+
+    # SSH to the server and deploy
+    - name: Deploy to Server
+      uses: appleboy/ssh-action@v0.1.8
+      with:
+        host: ${{ secrets.SERVER_HOST }}
+        username: ${{ secrets.SERVER_USER }}
+        key: ${{ secrets.SERVER_SSH_KEY }}
+        script: |
+          docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+          docker pull imansafari24/portfolio:latest
+          docker stop next-portfolio || true
+          docker rm next-portfolio || true
+          docker run -d --name next-portfolio -p 80:80 imansafari24/portfolio:latest
+
