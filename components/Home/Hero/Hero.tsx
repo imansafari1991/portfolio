@@ -18,14 +18,14 @@ const Hero = () => {
             <p data-aos="fade-left" data-aos-delay="200" className="mt-6 text-sm md:text-base text-white text-opacity-60">
               {BaseInfo.description}
             </p>
-            <button
-            data-aos="zoom-in" data-aos-delay="300"
-              className="md:px-8 md:py-2.5 px-6 py-1.5 text-white font-semibold text-sm md:text-lg transition-all duration-200 rounded-lg mt-8 bg-blue-700
-            hover:bg-blue-900 flex item-center space-x-2"
+            <a
+            data-aos="zoom-in" data-aos-delay="300" target="_blank" href="/resume/Iman-Safari-FullStack-Developer.pdf"
+              className="md:px-8 md:py-2.5 px-3 py-1.5 text-white font-semibold text-sm md:text-lg transition-all duration-200 rounded-lg mt-8 bg-blue-700
+            hover:bg-blue-900 flex item-center space-x-2 w-[45%]"
             >
               <span>Download CV</span>
               <FaDownload className="mt-1" />
-            </button>
+            </a>
           </div>
           <div data-aos="zoom-in" data-aos-delay="400" className="mx-auto hidden lg:block  rounded-[3rem] border-[3.5px] border-blue-950 overflow-hidden">
             <Image
