@@ -28,10 +28,10 @@ function Home() {
       <Hero />
       <About />
       <Services />
-      <Project />
+      {/* <Project /> */}
       <Skills />
-      <Reviews />
-      <Blog />
+      {/* <Reviews />
+      <Blog /> */}
       <Contact />
     </div>
   );

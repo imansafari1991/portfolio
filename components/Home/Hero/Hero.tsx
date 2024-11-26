@@ -20,8 +20,8 @@ const Hero = () => {
             </p>
             <a
             data-aos="zoom-in" data-aos-delay="300" target="_blank" href="/resume/Iman-Safari-FullStack-Developer.pdf"
-              className="md:px-8 md:py-2.5 px-3 py-1.5 text-white font-semibold text-sm md:text-lg transition-all duration-200 rounded-lg mt-8 bg-blue-700
-            hover:bg-blue-900 flex item-center space-x-2 w-[45%]"
+              className=" md:py-2.5 px-3 py-1.5 text-white font-semibold text-sm md:text-lg transition-all duration-200 rounded-lg mt-8 bg-blue-700
+            hover:bg-blue-900 flex item-center space-x-2 w-[35%]"
             >
               <span>Download CV</span>
               <FaDownload className="mt-1" />

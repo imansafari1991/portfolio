@@ -9,11 +9,11 @@ export const BaseInfo = {
 export const aboutInfo = {
   title: "Crafting Web Application with Passion and Precision",
   description:
-    "At webdev warriors, we’re a dedicated team of designers and developers committed to delivering tailored web solutions. With a blend of creativity and technical expertise, we help businesses elevate their online presence and achieve their goals",
-  client: "50+",
-  experience: "3+",
-  project: "200+",
-  website: "100+",
+    "We’re a dedicated team of designers and developers committed to delivering tailored web solutions. With a blend of creativity and technical expertise, we help businesses elevate their online presence and achieve their goals",
+  client: "20+",
+  experience: "7+",
+  project: "40+",
+  website: "10+",
 };
 
 export const servicesData = [
@@ -117,64 +117,74 @@ export const projectData = [
 export const skillsData = [
   {
     id: 1,
+    title: "C#",
+    image: "/images/Csharp.svg",
+    percent: "90%",
+  },
+  {
+    id: 2,
+    title: ".NET",
+    image: "/images/dotnet.png",
+    percent: "90%",
+  },
+  {
+    id: 3,
+    title: "SQL Server",
+    image: "/images/sqlserver.svg",
+    percent: "80%",
+  },
+  {
+    id: 4,
+    title: "Redis",
+    image: "/images/redis.svg",
+    percent: "80%",
+  },
+  {
+    id: 5,
+    title: "MongoDB",
+    image: "/images/mongo.svg",
+    percent: "50%",
+  },
+  {
+    id: 6,
     title: "React",
     image: "/images/react.svg",
     percent: "90%",
   },
   {
-    id: 2,
-    title: "CSS",
-    image: "/images/css.svg",
-    percent: "97%",
-  },
-  {
-    id: 3,
-    title: "JavaScript",
-    image: "/images/js.svg",
-    percent: "77%",
-  },
-  {
-    id: 4,
-    title: "TypeScript",
-    image: "/images/ts.svg",
-    percent: "67%",
-  },
-  {
-    id: 5,
-    title: "HTML",
-    image: "/images/html.svg",
-    percent: "67%",
-  },
-  {
-    id: 6,
-    title: "Node JS",
-    image: "/images/node.svg",
-    percent: "77%",
-  },
-  {
     id: 7,
-    title: "MongoDB",
-    image: "/images/mongo.svg",
-    percent: "65%",
+    title: "Docker",
+    image: "/images/docker2.png",
+    percent: "50%",
   },
+  
   {
     id: 8,
-    title: "Python",
-    image: "/images/python.svg",
-    percent: "55%",
+    title: "TypeScript",
+    image: "/images/ts.svg",
+    percent: "80%",
   },
+
   {
     id: 9,
-    title: "Firebase",
-    image: "/images/firebase.svg",
-    percent: "75%",
+    title: "HTML",
+    image: "/images/html.svg",
+    percent: "80%",
   },
   {
     id: 10,
-    title: "Vue",
-    image: "/images/vue.svg",
-    percent: "35%",
+    title: "CSS",
+    image: "/images/css.svg",
+    percent: "80%",
   },
+  {
+    id: 11,
+    title: "JavaScript",
+    image: "/images/js.svg",
+    percent: "60%",
+  }
+
+ 
 ];
 
 export const clientReviews = [
