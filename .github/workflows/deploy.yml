@@ -41,5 +41,5 @@ jobs:
           docker pull imansafari24/portfolio:latest
           docker stop next-portfolio || true
           docker rm next-portfolio || true
-          docker run -d --name next-portfolio -p 80:80 imansafari24/portfolio:latest
+          docker run -d --name next-portfolio -p 8081:80 imansafari24/portfolio:latest
 
